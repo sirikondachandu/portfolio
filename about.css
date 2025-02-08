@@ -1,0 +1,155 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root {
+    --bg-color: #1f1f21;
+    --text-color: #fff;
+    --main-color: #ffae00;
+    --big-font: 7rem;
+    --p-font: 1.1rem;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+/* Header Styling */
+header {
+    position: fixed;
+    top: 5px;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+      /* Adjusted padding to maintain alignment */
+    padding:10px 2%;
+    background: transparent;
+    transition: all ease 0.45s;
+}
+
+.logo {
+    color: var(--text-color);
+    font-size: 41px;
+    font-weight: 600;
+}
+
+.logo span {
+    color: var(--main-color);
+}
+
+.navbar {
+    display: flex;
+    gap:20px;
+    align-items: center; /* Ensure navbar items are aligned vertically */
+}
+
+.navbar a {
+    font-size: var(--p-font);
+    font-weight: 500;
+    color: var(--text-color);
+    margin: 0 25px;
+    transition: all ease 0.50s;
+}
+
+.navbar a:hover {
+    color: var(--main-color);
+}
+
+.navbar a.active {
+    color: var(--main-color);
+}
+
+.menu-btn {
+    background: linear-gradient(130.08deg, #383528 0%, #191919 100%);
+    box-shadow: 0px 20px 40px #00000070;
+    border: 1px solid #3b3b3b;
+    padding: 10px 20px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+#menu-icon {
+    font-size: 28px;
+    margin-left: 10px;
+    z-index: 6;
+}
+section{
+    padding:0 15%;
+}
+
+/* About Page Styling */
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+    padding: 40px;
+    text-align: left;
+}
+
+.about-content {
+    display: flex;
+    gap: 50px;
+    max-width: 1200px;
+    align-items: center;
+}
+
+.about-image img {
+    width: 350px;
+    height: auto;
+    border-radius: 50px; /* Adding border for focus */
+}
+
+.about-text h1 {
+    font-size: 36px;
+    color: var(--main-color); /* Title in golden yellow */
+    margin-bottom: 15px;
+}
+
+.about-text p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #e0e0e0; /* Softer white for body text */
+}
+
+/* Responsive Styling */
+@media (max-width: 1024px) {
+    .section {
+        padding: 100px 5%;
+    }
+
+    .section h2 {
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 15px 5%;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .section {
+        padding: 80px 5%;
+    }
+
+    .section h2 {
+        font-size: 3rem;
+    }
+}

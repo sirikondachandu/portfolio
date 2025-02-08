@@ -1,0 +1,139 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* Define Theme Variables */
+:root {
+    --bg-color: #1f1f21;
+    --text-color: #fff;
+    --main-color: #ffae00;
+
+    --big-font: 4rem;
+    --p-font: 1.1rem;
+}
+
+/* Apply Background and Text Color */
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+/* Header Styling */
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10%;
+    background: transparent;
+    transition: all ease 0.45s;
+}
+
+.logo {
+    color: var(--text-color);
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.logo span {
+    color: var(--main-color);
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar a {
+    font-size: var(--p-font);
+    font-weight: 500;
+    color: var(--text-color);
+    margin: 0 15px;
+    transition: all ease 0.50s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--main-color);
+}
+
+
+/* Section for certificates */
+.certificates {
+    display: flex;
+    flex-direction: column; /* Stack project cards vertically */
+    align-items: center; /* Center align the content */
+    justify-content: center;
+    min-height: 100vh;
+    padding: 50px;
+}
+
+
+/* Title for certificates */
+.certificates h1 {
+    font-size: 36px;
+    color: var(--main-color); /* Title in golden yellow */
+    margin-bottom: 15px;
+}
+
+/* Container for all cards */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Individual card styling */
+.card {
+    width: 300px;
+    background-color: #3a3a3d;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Content inside the card */
+.card-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.card h4 {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1.1rem;
+    color: #aaa;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}

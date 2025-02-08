@@ -1,0 +1,146 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* Define Theme Variables */
+:root {
+    --bg-color: #1f1f21;
+    --text-color: #fff;
+    --main-color: #ffae00;
+
+    --big-font: 4rem;
+    --p-font: 1.1rem;
+}
+
+/* Apply Background and Text Color */
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+/* Header Styling */
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10%;
+    background: transparent;
+    transition: all ease 0.45s;
+}
+
+.logo {
+    color: var(--text-color);
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.logo span {
+    color: var(--main-color);
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar a {
+    font-size: var(--p-font);
+    font-weight: 500;
+    color: var(--text-color);
+    margin: 0 15px;
+    transition: all ease 0.50s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--main-color);
+}
+
+.projects h1 {
+    font-size: 36px;
+    color: var(--main-color); /* Title in golden yellow */
+    margin-bottom: 15px; /* Add space between title and the projects */
+}
+
+/* Projects Section Styling */
+.projects {
+    display: flex;
+    flex-direction: column; /* Stack project cards vertically */
+    align-items: center; /* Center align the content */
+    justify-content: center;
+    min-height: 100vh;
+    padding: 50px;
+}
+
+/* Project Container Flexbox Styling */
+.project-container {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    justify-content: center; /* Center align the project cards */
+    max-width: 1200px;
+}
+
+/* Individual Project Styling */
+.project {
+    background: #333;
+    border-radius: 8px;
+    padding: 20px;
+    width: 30%;
+    text-align: left;
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+/* Project Image Styling */
+.project img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Project Title and Description Styling */
+h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+p {
+    font-size: 14px;
+    color: #bbb;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .projects {
+        padding: 30px;
+    }
+    .project-container {
+        flex-direction: column; /* Stack projects vertically on medium screens */
+    }
+    .project {
+        width: 100%; /* Project cards take up full width */
+    }
+}
+
+@media (max-width: 768px) {
+    .projects {
+        padding: 20px;
+    }
+    .project-container {
+        flex-direction: column; /* Stack projects vertically on smaller screens */
+    }
+    .project {
+        width: 100%; /* Project cards take up full width */
+    }
+}

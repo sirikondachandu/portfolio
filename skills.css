@@ -1,0 +1,148 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* Define Theme Variables */
+:root {
+    --bg-color: #1f1f21;
+    --text-color: #fff;
+    --main-color: #ffae00;
+
+    --big-font: 4rem;
+    --p-font: 1.1rem;
+}
+
+/* Apply Background and Text Color */
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+/* Header Styling */
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 35px 15%;
+    background: transparent;
+    transition: all ease 0.45s;
+}
+
+.logo {
+    color: var(--text-color);
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.logo span {
+    color: var(--main-color);
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar a {
+    font-size: var(--p-font);
+    font-weight: 500;
+    color: var(--text-color);
+    margin: 0 15px;
+    transition: all ease 0.50s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--main-color);
+}
+.skills-section h1 {
+    font-size: 36px;
+    color: var(--main-color); /* Title in golden yellow */
+    margin-top: 20px; /* Add space between title and the projects */
+    text-align: center;
+}
+
+.skills-section {
+    display: flex;
+    flex-direction: column; /* Stack project cards vertically */
+    align-items: center; /* Center align the content */
+    justify-content: center;
+    min-height: 100vh;
+    padding: 50px;
+
+}
+
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.skill {
+    background-color: #282828;
+    padding: 20px;
+    width: 250px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.skill:hover {
+    transform: scale(1.05);
+}
+
+.skill img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.skill h3 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+.skill p {
+    font-size: 0.9rem;
+    color: #bbb;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .section {
+        padding: 80px 5%;
+    }
+    .section h2 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 15px 5%;
+    }
+    .navbar {
+        display: none;
+    }
+    .section {
+        padding: 60px 5%;
+    }
+    .section h2 {
+        font-size: 2rem;
+    }
+}
